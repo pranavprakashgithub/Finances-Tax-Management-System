@@ -3,7 +3,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Hn8HwaqBiqZQx1_jjLBCKhhb60959_ZJwg&usqp=CAU" class="img-circle" width="60"></a></p>
+              	  <p class="centered"><a href="profile.php"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Hn8HwaqBiqZQx1_jjLBCKhhb60959_ZJwg&usqp=CAU" class="img-circle" width="60"></a></p>
                    <?php $query=mysqli_query($bd, "select fullName from users where userEmail='".$_SESSION['login']."'");
  while($row=mysqli_fetch_array($query)) 
  {
