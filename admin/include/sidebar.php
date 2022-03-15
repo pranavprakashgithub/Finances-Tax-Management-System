@@ -56,12 +56,12 @@ $num1 = mysqli_num_rows($rt);
 									Manage users
 								</a>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="manage-worker.php">
 									<i class="menu-icon icon-group"></i>
 									Manage Workers
 								</a>
-							</li>
+							</li> -->
 						</ul>
 
 

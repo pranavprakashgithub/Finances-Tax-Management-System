@@ -6,7 +6,7 @@
 				</a>
 
 			  	<a class="brand" href="index.html">
-			  		MGP | Admin
+			  		MFTP | Admin
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">

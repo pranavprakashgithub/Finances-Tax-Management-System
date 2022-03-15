@@ -33,14 +33,14 @@
                   <li class="sub-menu">
                       <a href="register-complaint.php" >
                           <i class="fa fa-book"></i>
-                          <span>Lodge Complaint</span>
+                          <span>Generate Tax</span>
                       </a>
                     </li>
                   </li>
                   <li class="sub-menu">
                       <a href="complaint-history.php" >
                           <i class="fa fa-tasks"></i>
-                          <span>Complaint History</span>
+                          <span>Tax Payment History</span>
                       </a>
                       
                   </li>

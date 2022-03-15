@@ -43,7 +43,7 @@ echo '<script> alert("Your complain has been successfully filled and your compla
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>MGP | User Register Complaint</title>
+    <title>MFTP | User Register Complaint</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -78,7 +78,7 @@ function getCat(val) {
       <?php include("includes/sidebar.php");?>
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> Register Complaint</h3>
+          	<h3><i class="fa fa-angle-right"></i> Generate Tax</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
