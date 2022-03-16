@@ -17,7 +17,7 @@ else{
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>MGP | Complaint History</title>
+    <title>MGP | Tax Payment History</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -45,7 +45,7 @@ else{
 
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i>Your Complaint Hstory</h3>
+          	<h3><i class="fa fa-angle-right"></i>Your Tax Payment Hstory</h3>
 		  		<div class="row mt">
 			  		<div class="col-lg-12">
                       <div class="content-panel">
@@ -53,8 +53,8 @@ else{
                             <table class="table table-bordered table-striped table-condensed">
                               <thead>
                               <tr>
-                                  <th>Complaint Number</th>
-                                  <th>Reg Date</th>
+                                  <th>Receipt Number</th>
+                                  <th>Payment Date</th>
                                   <th>last Updation date</th>
                                   <th >Status</th>
                                   <th>Action</th>

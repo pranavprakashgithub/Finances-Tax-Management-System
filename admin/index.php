@@ -115,7 +115,7 @@ exit();
 		
 			 
 
-			<b class="copyright">&copy; Team Hashtag </b> All rights reserved.
+			<b class="copyright">&copy; Team Falcon </b> All rights reserved.
 		<style>.copyright{color: white;}</style>
 	</div> 
 	<style> .footer{background-color:black;width:100%;position:absolute;bottom: 0; height: 0; color: white;}</style>

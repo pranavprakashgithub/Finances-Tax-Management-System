@@ -43,7 +43,7 @@ echo '<script> alert("Your complain has been successfully filled and your compla
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>MFTP | User Register Complaint</title>
+    <title>MFTP | User Tax details</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -128,7 +128,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Complaint Type</label>
+<label class="col-sm-2 col-sm-2 control-label">Tax Type</label>
 <div class="col-sm-4">
 <select name="complaintype" class="form-control" required="">
                 <option value=" Complaint"> Complaint</option>
@@ -162,13 +162,13 @@ while ($rw=mysqli_fetch_array($sql)) {
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Complaint Details (max 2000 words) </label>
+<label class="col-sm-2 col-sm-2 control-label">Tax Details (max 2000 words) </label>
 <div class="col-sm-6">
 <textarea  name="complaindetails" required="required" cols="10" rows="10" class="form-control" maxlength="2000"></textarea>
 </div>
 </div>
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Complaint Related Doc(if any) </label>
+<label class="col-sm-2 col-sm-2 control-label">Tax Related Doc(if any) </label>
 <div class="col-sm-6">
 <input type="file" name="compfile" class="form-control" value="">
 </div>
