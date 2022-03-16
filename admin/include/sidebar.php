@@ -6,13 +6,13 @@
 								<a class="collapsed" data-toggle="collapse" href="#togglePages">
 									<i class="menu-icon icon-cog"></i>
 									<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
-									Manage Complaint
+									Manage Finances & Tax
 								</a>
 								<ul id="togglePages" class="collapse unstyled">
 									<li>
 										<a href="notprocess-complaint.php">
 											<i class="icon-tasks"></i>
-											Not Process Yet Complaint
+											Not Received Payment Yet
 											<?php
 $rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where status is null");
 $num1 = mysqli_num_rows($rt);
@@ -25,7 +25,7 @@ $num1 = mysqli_num_rows($rt);
 									<li>
 										<a href="inprocess-complaint.php">
 											<i class="icon-tasks"></i>
-											Pending Complaint
+											Pending Tax
                    <?php 
   $status="in Process";                   
 $rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where status='$status'");
@@ -37,7 +37,7 @@ $num1 = mysqli_num_rows($rt);
 									<li>
 										<a href="closed-complaint.php">
 											<i class="icon-inbox"></i>
-											Closed Complaints
+											Received Tax Payments
 	     <?php 
   $status="closed";                   
 $rt = mysqli_query($bd, "SELECT * FROM tblcomplaints where status='$status'");
