@@ -30,7 +30,7 @@ while($row=mysqli_fetch_array($sql))
  $cmpn=$row['complaintNumber'];
 }
 $complainno=$cmpn;
-echo '<script> alert("Your complain has been successfully filled and your complaintno is  "+"'.$complainno.'")</script>';
+echo '<script> alert("Your Tax Amount is  "+"'.$complainno.'")</script>';
 }
 ?>
 
@@ -42,7 +42,8 @@ echo '<script> alert("Your complain has been successfully filled and your compla
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
+     
+    
     <title>MFTP | User Tax details</title>
 
     <!-- Bootstrap core CSS -->
@@ -116,12 +117,12 @@ while ($rw=mysqli_fetch_array($sql)) {
 ?>
 </select>
  </div>
-<label class="col-sm-2 col-sm-2 control-label">Sub Category </label>
+<!-- <label class="col-sm-2 col-sm-2 control-label">Sub Category </label>
  <div class="col-sm-4">
 <select name="subcategory" id="subcategory" class="form-control" >
 <option value="">Select Subcategory</option>
 </select>
-</div>
+</div> -->
  </div>
 
 
@@ -131,15 +132,15 @@ while ($rw=mysqli_fetch_array($sql)) {
 <label class="col-sm-2 col-sm-2 control-label">Tax Type</label>
 <div class="col-sm-4">
 <select name="complaintype" class="form-control" required="">
-                <option value=" Complaint"> Complaint</option>
+                <option value=" Complaint"> Property</option>
                   <option value="General Query">General Query</option>
                 </select> 
 </div>
 
-<label class="col-sm-2 col-sm-2 control-label">State</label>
+<label class="col-sm-2 col-sm-2 control-label">Area Type</label>
 <div class="col-sm-4">
 <select name="state" required="required" class="form-control">
-<option value="">Select State</option>
+<option value="">Select Area</option>
 <?php $sql=mysqli_query($bd, "select stateName from state ");
 while ($rw=mysqli_fetch_array($sql)) {
   ?>
@@ -153,18 +154,18 @@ while ($rw=mysqli_fetch_array($sql)) {
 </div>
 
 
-<div class="form-group">
+<!-- <div class="form-group">
 <label class="col-sm-2 col-sm-2 control-label">Nature of Complaint</label>
 <div class="col-sm-4">
 <input type="text" name="noc" required="required" value="" required="" class="form-control">
 </div>
 
-</div>
+</div> -->
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Tax Details (max 2000 words) </label>
+<label class="col-sm-2 col-sm-2 control-label">Property Details(In Sq.Ft.)  </label>
 <div class="col-sm-6">
-<textarea  name="complaindetails" required="required" cols="10" rows="10" class="form-control" maxlength="2000"></textarea>
+<textarea  name="complaindetails" required="required" cols="5" rows="1" class="form-control" maxlength="20"></textarea>
 </div>
 </div>
 <div class="form-group">

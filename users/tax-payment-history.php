@@ -55,7 +55,7 @@ else{
                               <tr>
                                   <th>Receipt Number</th>
                                   <th>Payment Date</th>
-                                  <th>last Updation date</th>
+                                  <!-- <th>last Updation date</th> -->
                                   <th >Status</th>
                                   <th>Action</th>
                                   
@@ -69,14 +69,14 @@ while($row=mysqli_fetch_array($query))
                               <tr>
                                   <td align="center"><?php echo htmlentities($row['complaintNumber']);?></td>
                                   <td align="center"><?php echo htmlentities($row['regDate']);?></td>
-                                 <td align="center"><?php echo  htmlentities($row['lastUpdationDate']);
+                                 <!-- <td align="center"><?php echo  htmlentities($row['lastUpdationDate']);
 
-                                 ?></td>
+                                 ?></td> -->
                                   <td align="center"><?php 
                                     $status=$row['status'];
                                     if($status=="" or $status=="NULL")
                                     { ?>
-                                      <button type="button" class="btn btn-theme04">Not Process Yet</button>
+                                      <button type="button" class="btn btn-theme04">Paid</button>
                                    <?php }
  if($status=="in process"){ ?>
 <button type="button" class="btn btn-warning">In Process</button>
@@ -86,8 +86,8 @@ if($status=="closed") {
 <button type="button" class="btn btn-success">Closed</button>
 <?php } ?>
                                    <td align="center">
-                                   <a href="complaint-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>">
-<button type="button" class="btn btn-primary">View Details</button></a>
+                                   <a href="tax-payment-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>">
+<button type="button" class="btn btn-primary">View Receipt</button></a>
                                    </td>
                                 </tr>
                               <?php } ?>

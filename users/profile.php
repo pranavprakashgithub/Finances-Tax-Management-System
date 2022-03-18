@@ -114,7 +114,7 @@ $errormsg="Profile not updated !!";
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">State</label>
+<label class="col-sm-2 col-sm-2 control-label">Area</label>
 <div class="col-sm-4">
 <select name="state" required="required" class="form-control">
 <option value="<?php echo htmlentities($row['State']);?>"><?php echo htmlentities($st=$row['State']);?></option>
@@ -136,7 +136,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 </div>
 <label class="col-sm-2 col-sm-2 control-label">Country </label>
 <div class="col-sm-4">
-<input type="text" name="country" required="required" value="<?php echo htmlentities($row['country']);?>" class="form-control">
+<input type="text" name="country" required="required" value="India" class="form-control" readonly>
 </div>
 </div>
 
@@ -146,12 +146,17 @@ while ($rw=mysqli_fetch_array($sql)) {
 <div class="col-sm-4">
 <input type="text" name="pincode" maxlength="6" required="required" value="<?php echo htmlentities($row['pincode']);?>" class="form-control">
 </div>
+<label class="col-sm-2 col-sm-2 control-label">House No.</label>
+<div class="col-sm-4">
+<input type="text" name="houseno" maxlength="10" required="required" value="<?php echo htmlentities($row['houseno']);?>" class="form-control">
+</div>
+</div>
+<div class="form-group">
 <label class="col-sm-2 col-sm-2 control-label">Reg Date </label>
 <div class="col-sm-4">
 <input type="text" name="regdate" required="required" value="<?php echo htmlentities($row['regDate']);?>" class="form-control" readonly>
  </div>
 </div>
-
 
 <?php } ?>
 

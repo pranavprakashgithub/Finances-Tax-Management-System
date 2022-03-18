@@ -15,7 +15,8 @@ else{ ?>
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
+    <style>.box1{background:  cornsilk;}</style>
+       
     <title>MGP | Dashboard</title>
 
     <!-- Bootstrap core CSS -->
@@ -69,7 +70,7 @@ $num1 = mysqli_num_rows($rt);
 {?>
 					  			<h3><?php echo htmlentities($num1);?></h3>
                   			</div>
-					  			<p><?php echo htmlentities($num1);?> Complaints not Process yet</p>
+					  			<p style="font-size:medium"><?php echo htmlentities($num1);?> Tax Paid yet</p>
                   		</div>
                       <?php }?>
 
@@ -84,11 +85,11 @@ $num1 = mysqli_num_rows($rt);
 {?>
                   <h3><?php echo htmlentities($num1);?></h3>
                         </div>
-                  <p><?php echo htmlentities($num1);?> Complaints Status in process</p>
+                  <p style="font-size:medium"><?php echo htmlentities($num1);?> Tax Not Paid </p>
                       </div>
   <?php }?>
 
-                      <div class="col-md-2 col-sm-2 box0">
+                      <!-- <div class="col-md-2 col-sm-2 box0">
                         <div class="box1">
                   <span class="li_news"></span>
                        <?php 
@@ -99,7 +100,7 @@ $num1 = mysqli_num_rows($rt);
                   <h3><?php echo htmlentities($num1);?></h3>
                         </div>
                   <p><?php echo htmlentities($num1);?> Complaint has been closed</p>
-                      </div>
+                      </div> -->
 
 <?php }?>
                   	

@@ -23,6 +23,7 @@ else{ ?>
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <style> .row-mt{color: black; display: flex;}</style>
   </head>
 
   <body>
@@ -32,55 +33,55 @@ else{ ?>
 <?php include('includes/sidebar.php');?>
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Tax Details</h3>
+          	<h3 style="color:black"><i class="fa fa-angle-right"></i> Tax Details</h3>
             <hr />
 
  <?php $query=mysqli_query($bd, "select tblcomplaints.*,category.categoryName as catname from tblcomplaints join category on category.id=tblcomplaints.category where userId='".$_SESSION['id']."' and complaintNumber='".$_GET['cid']."'");
 while($row=mysqli_fetch_array($query))
 {?>
-          	<div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Complaint Number : </b></label>
+          	<div class="row-mt">
+            <label class="col-sm-2 col-sm-2 control-label"><b>Receipt Number : </b></label>
           		<div class="col-sm-4">
-          		<p><?php echo htmlentities($row['complaintNumber']);?></p>
+          		<p style="color:blue"><b><?php echo htmlentities($row['complaintNumber']);?></b></p>
           		</div>
-<label class="col-sm-2 col-sm-2 control-label"><b>Reg. Date :</b></label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Payment Date :</b></label>
               <div class="col-sm-4">
-              <p><?php echo htmlentities($row['regDate']);?></p>
+              <p style="color:blue"><b><?php echo htmlentities($row['regDate']);?></b></p>
               </div>
           	</div>
 
 
-<div class="row mt">
+<div class="row-mt">
             <label class="col-sm-2 col-sm-2 control-label"><b>Category :</b></label>
               <div class="col-sm-4">
-              <p><?php echo htmlentities($row['catname']);?></p>
+              <p style="color:blue"><b><?php echo htmlentities($row['catname']);?></b></p>
               </div>
-<label class="col-sm-2 col-sm-2 control-label"><b>Sub Category :</b> </label>
+<!-- <label class="col-sm-2 col-sm-2 control-label"><b>Sub Category :</b> </label>
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['subcategory']);?></p>
-              </div>
+              </div> -->
             </div>
 
 
 
-  <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Complaint Type :</b></label>
+  <div class="row-mt">
+            <label class="col-sm-2 col-sm-2 control-label"><b>Tax Type :</b></label>
               <div class="col-sm-4">
-              <p><?php echo htmlentities($row['complaintType']);?></p>
+              <p style="color:blue"><b><?php echo htmlentities($row['complaintType']);?></b></p>
               </div>
-<label class="col-sm-2 col-sm-2 control-label"><b>State :</b></label>
+<!-- <label class="col-sm-2 col-sm-2 control-label"><b>State :</b></label>
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['state']);?></p>
-              </div>
+              </div> -->
             </div>  
 
 
 
-  <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Nature of Complaint :</b></label>
+  <div class="row-mt">
+            <!-- <label class="col-sm-2 col-sm-2 control-label"><b>Nature of Complaint :</b></label>
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['noc']);?></p>
-              </div>
+              </div> -->
 <label class="col-sm-2 col-sm-2 control-label"><b>File :</b></label>
               <div class="col-sm-4">
               <p><?php $cfile=$row['complaintFile'];
@@ -95,10 +96,10 @@ else{ ?>
               </p>
               </div>
             </div> 
- <div class="row mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Complaint Details </label>
+ <div class="row-mt">
+            <label class="col-sm-2 col-sm-2 control-label"><b>Property Details(In Sq.Ft.) </label>
               <div class="col-sm-10">
-              <p><?php echo htmlentities($row['complaintDetails']);?></p>
+              <p style="color:blue"><?php echo htmlentities($row['complaintDetails']);?></p>
               </div>
 
             </div> 
@@ -126,7 +127,7 @@ while($rw=mysqli_fetch_array($ret))
 
 <?php } ?>
 
- <div class="row mt">
+ <div class="row-mt">
             
 <label class="col-sm-2 col-sm-2 control-label"><b>Final Status :</b></label>
               <div class="col-sm-4">
@@ -134,7 +135,7 @@ while($rw=mysqli_fetch_array($ret))
 
 if($row['status']=="NULL" || $row['status']=="" )
 {
-echo "Not Process yet";
+echo "Paid";
 } else{
               echo htmlentities($row['status']);
 }

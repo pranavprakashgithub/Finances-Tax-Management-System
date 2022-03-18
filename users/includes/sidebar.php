@@ -31,14 +31,14 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="register-complaint.php" >
+                      <a href="generate-tax.php" >
                           <i class="fa fa-book"></i>
                           <span>Generate Tax</span>
                       </a>
                     </li>
                   </li>
                   <li class="sub-menu">
-                      <a href="complaint-history.php" >
+                      <a href="tax-payment-history.php" >
                           <i class="fa fa-tasks"></i>
                           <span>Tax Payment History</span>
                       </a>
