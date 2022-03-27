@@ -94,7 +94,7 @@ echo htmlentities($msg);
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
     <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("assets/img/mgp.jpeg", {speed: 500});
+        $.backstretch("https://media.istockphoto.com/photos/digital-screen-with-encryption-data-background-big-data-with-binary-picture-id1334692234?k=20&m=1334692234&s=612x612&w=0&h=3aEsUTKSPJQbTy99ZuegCTGA7-Mn5grXQBfYdJ6urPg=", {speed: 500});
     </script>
 
 

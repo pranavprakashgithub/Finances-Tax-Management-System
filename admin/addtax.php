@@ -5,18 +5,7 @@ if(strlen($_SESSION['alogin'])==0)
   { 
 header('location:index.php');
 }
-else {
-  if(isset($_POST['update']))
-  {
-$complaintnumber=$_GET['cid'];
-$status=$_POST['status'];
-$remark=$_POST['remark'];
-$query=mysqli_query($bd, "insert into complaintremark(complaintNumber,status,remark) values('$complaintnumber','$status','$remark')");
-$sql=mysqli_query($bd, "update tblcomplaints set status='$status' where complaintNumber='$complaintnumber'");
-
-echo "<script>alert('Complaint details updated successfully');</script>";
-
-  }
+else{
 
  ?>
 <script language="javascript" type="text/javascript">
@@ -28,6 +17,17 @@ function f3()
 {
 window.print(); 
 }
+<?php 
+
+$id=$_GET['uid'];
+$tax=$_POST['tax'];
+// $remark=$_POST['remark'];
+// $query=mysqli_query($bd, "insert into complaintremark(complaintNumber,status,remark) values('$complaintnumber','$status','$remark')");
+$sql=mysqli_query($bd, "insert into bill(id,amount) values('$id','$tax') ");
+$query=mysqli_query($bd, "select * from bill where uid='".$_GET['uid']."'");
+// $sql=mysqli_query($bd, "update bill set amount='$tax' where id='$id'");
+
+?>
 </script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -48,25 +48,24 @@ window.print();
     </tr>
     <tr height="50">
       <td><b>Complaint Number</b></td>
-      <td><?php echo htmlentities($_GET['cid']); ?></td>
+      <td><?php echo htmlentities($_GET[
+        'uid']); ?></td>
     </tr>
     <tr height="50">
-      <td><b>Status</b></td>
-      <td><select name="status" required="required">
-      <option value="">Select Status</option>
-      <option value="in process">In Process</option>
-      <option value="worker assigned">Worker Assigned</option>
-    <option value="closed">Closed</option>
-        
-      </select></td>
+      <td><b>Amount</b></td>
+     <td> <div class="col-sm-6">
+<textarea  name="tax"  required="required" cols="5" rows="1" class="form-control" maxlength="20"></textarea>
+</td>
+</div>
+
     </tr>
 
 
-      <tr height="50">
+      <!-- <tr height="50">
       <td><b>Remark</b></td>
       <td><textarea name="remark" cols="50" rows="10" required="required"></textarea></td>
     </tr>
-    
+     -->
 
 
         <tr height="50">

@@ -108,7 +108,10 @@ while($row=mysqli_fetch_array($ret1))
     </tr>
     
     <tr>
-  
+    <td><a href="addtax.php">
+											 <button type="button" class="btn btn-primary">Add Tax</button>
+											</a></td>
+											
       <td colspan="2">   
       <input name="Submit2" type="submit" class="txtbox4" value="Close this window " onClick="return f2();" style="cursor: pointer;"  /></td>
     </tr>
@@ -120,8 +123,8 @@ while($row=mysqli_fetch_array($ret1))
  
 </table>
  </form>
-</div>
 
+ 
 </body>
 </html>
 

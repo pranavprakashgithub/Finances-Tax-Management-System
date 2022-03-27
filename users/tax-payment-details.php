@@ -46,7 +46,7 @@ while($row=mysqli_fetch_array($query))
           		</div>
 <label class="col-sm-2 col-sm-2 control-label"><b>Payment Date :</b></label>
               <div class="col-sm-4">
-              <p style="color:blue"><b><?php echo htmlentities($row['regDate']);?></b></p>
+              <p style="color:yellow"><b><?php echo htmlentities($row['regDate']);?></b></p>
               </div>
           	</div>
 
@@ -56,10 +56,10 @@ while($row=mysqli_fetch_array($query))
               <div class="col-sm-4">
               <p style="color:blue"><b><?php echo htmlentities($row['catname']);?></b></p>
               </div>
-<!-- <label class="col-sm-2 col-sm-2 control-label"><b>Sub Category :</b> </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Sub Category :</b> </label>
               <div class="col-sm-4">
-              <p><?php echo htmlentities($row['subcategory']);?></p>
-              </div> -->
+              <p style="color: black"><?php echo htmlentities($row['subcategory']);?></p>
+              </div>
             </div>
 
 
@@ -69,10 +69,10 @@ while($row=mysqli_fetch_array($query))
               <div class="col-sm-4">
               <p style="color:blue"><b><?php echo htmlentities($row['complaintType']);?></b></p>
               </div>
-<!-- <label class="col-sm-2 col-sm-2 control-label"><b>State :</b></label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Area :</b></label>
               <div class="col-sm-4">
               <p><?php echo htmlentities($row['state']);?></p>
-              </div> -->
+              </div>
             </div>  
 
 
@@ -97,9 +97,16 @@ else{ ?>
               </div>
             </div> 
  <div class="row-mt">
-            <label class="col-sm-2 col-sm-2 control-label"><b>Property Details(In Sq.Ft.) </label>
+            <label class="col-sm-2 col-sm-2 control-label"><b>Property Details(In Sq.Ft): </label>
               <div class="col-sm-10">
               <p style="color:blue"><?php echo htmlentities($row['complaintDetails']);?></p>
+              </div>
+
+            </div> 
+            <div class="row-mt">
+            <label class="col-sm-2 col-sm-2 control-label"><b>Amount: </label>
+              <div class="col-sm-10">
+              <p style="color:blue"><?php echo htmlentities($row['noc']);?></p>
               </div>
 
             </div> 
@@ -110,7 +117,7 @@ else{ ?>
 while($rw=mysqli_fetch_array($ret))
 {
 ?>
- <div class="row mt">
+ <!-- <div class="row mt">
             
 <label class="col-sm-2 col-sm-2 control-label"><b>Remark:</b></label>
               <div class="col-sm-10">
@@ -123,7 +130,7 @@ while($rw=mysqli_fetch_array($ret))
               <div class="col-sm-10">
  <?php echo  htmlentities($rw['sstatus']); ?>
               </div>
-            </div>
+            </div> -->
 
 <?php } ?>
 
@@ -131,11 +138,11 @@ while($rw=mysqli_fetch_array($ret))
             
 <label class="col-sm-2 col-sm-2 control-label"><b>Final Status :</b></label>
               <div class="col-sm-4">
-              <p style="color:red"><?php 
+              <p style="color:green"><?php 
 
 if($row['status']=="NULL" || $row['status']=="" )
 {
-echo "Paid";
+echo  "Paid";
 } else{
               echo htmlentities($row['status']);
 }

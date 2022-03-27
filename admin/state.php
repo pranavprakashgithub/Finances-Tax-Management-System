@@ -51,7 +51,7 @@ if(isset($_GET['del']))
 
 						<div class="module">
 							<div class="module-head">
-								<h3>State</h3>
+								<h3>Area</h3>
 							</div>
 							<div class="module-body">
 
@@ -77,9 +77,9 @@ if(isset($_GET['del']))
 			<form class="form-horizontal row-fluid" name="Category" method="post" >
 									
 <div class="control-group">
-<label class="control-label" for="basicinput">State Name</label>
+<label class="control-label" for="basicinput">Area Name</label>
 <div class="controls">
-<input type="text" placeholder="Enter State Name"  name="state" class="span8 tip" required>
+<input type="text" placeholder="Enter Area Name"  name="state" class="span8 tip" required>
 </div>
 </div>
 
@@ -103,14 +103,14 @@ if(isset($_GET['del']))
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage States</h3>
+								<h3>Manage Areas</h3>
 							</div>
 							<div class="module-body table">
 								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>State</th>
+											<th>Area</th>
 											<th>Description</th>
 											<th>Creation date</th>
 											<th>Last Updated</th>

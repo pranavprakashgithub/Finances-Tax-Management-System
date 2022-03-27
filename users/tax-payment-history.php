@@ -57,7 +57,7 @@ else{
                                   <th>Payment Date</th>
                                   <!-- <th>last Updation date</th> -->
                                   <th >Status</th>
-                                  <th>Action</th>
+                                  <th>Receipt</th>
                                   
                               </tr>
                               </thead>
@@ -76,7 +76,7 @@ while($row=mysqli_fetch_array($query))
                                     $status=$row['status'];
                                     if($status=="" or $status=="NULL")
                                     { ?>
-                                      <button type="button" class="btn btn-theme04">Paid</button>
+                                      <button type="button" class="btn btn-theme04" style="background-color:green">Paid</button>
                                    <?php }
  if($status=="in process"){ ?>
 <button type="button" class="btn btn-warning">In Process</button>

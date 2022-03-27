@@ -79,9 +79,14 @@ exit();
 		<div class="container">
 			<div class="row">
 				<div class="module module-login span4 offset4">
+				
 					<form class="form-vertical" method="post">
+					<div class="col-lg-12 login-key">
+						<img src="https://cdn1.iconfinder.com/data/icons/client-management/512/key-512.png" alt="admin" class="key" >
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>	
 						<div class="module-head">
-							<h3>Sign In</h3>
+							<h2 style="color: white; margin-top:1%;">Admin Panel</h2>
 						</div>
 						<span style="color:red;" ><?php echo htmlentities($_SESSION['errmsg']); ?><?php echo htmlentities($_SESSION['errmsg']="");?></span>
 						<div class="module-body">
@@ -99,7 +104,7 @@ exit();
 						<div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
-									<button type="submit" class="btn btn-primary pull-right" name="submit">Login</button>
+									<button type="submit" id="btn" class="btn btn-primary pull-right" name="submit">Login</button>
 									
 								</div>
 							</div>
@@ -110,7 +115,21 @@ exit();
 		</div>
 	</div><!--/.wrapper-->
 
-	<style> .wrapper{position:absolute;width:100%;height:80vh;background-color: burlywood;} .module{background-color: lightsteelblue;} .module-head{background-color: lightsteelblue} .module-foot{background-color: lightsteelblue;}</style>
+	<style>
+ .wrapper{position:absolute;width:100%;height:80vh;background-color: #222D32; } .module{height: auto;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); margin-top: 3.5%;} .module-head{height: auto;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); } .module-foot{height: 20px;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); } 
+    .key{height:80px; margin-top: 15px; margin-bottom: -7px;}
+	#btn{position: absolute; margin-top: -0.25%; margin-left: -2%;}
+
+</style>
 	<div class="footer">
 		
 			 

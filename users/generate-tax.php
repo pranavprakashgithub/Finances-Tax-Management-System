@@ -16,13 +16,13 @@ $subcat=$_POST['subcategory'];
 $complaintype=$_POST['complaintype'];
 $state=$_POST['state'];
 $noc=$_POST['noc'];
-$complaintdetials=$_POST['complaindetails'];
+$complaintdetials=$_POST['taxdetails'];
 $compfile=$_FILES["compfile"]["name"];
 
 
 
-move_uploaded_file($_FILES["compfile"]["tmp_name"],"complaintdocs/".$_FILES["compfile"]["name"]);
-$query=mysqli_query($bd, "insert into tblcomplaints(userId,category,subcategory,complaintType,state,noc,complaintDetails,complaintFile) values('$uid','$category','$subcat','$complaintype','$state','$noc','$complaintdetials','$compfile')");
+move_uploaded_file($_FILES["compfile"]["tmp_name"],"taxrelateddocs/".$_FILES["compfile"]["name"]);
+$query=mysqli_query($bd, "insert into tblcomplaints(userId,category,subcategory,complaintType,state,noc,complaintDetails,complaintFile) values('$uid','$category','$subcat','$complaintype','$state','$noc','$complaintdetails','$compfile')");
 
 $sql=mysqli_query($bd, "select complaintNumber from tblcomplaints  order by complaintNumber desc limit 1");
 while($row=mysqli_fetch_array($sql))
@@ -30,7 +30,12 @@ while($row=mysqli_fetch_array($sql))
  $cmpn=$row['complaintNumber'];
 }
 $complainno=$cmpn;
-echo '<script> alert("Your Tax Amount is  "+"'.$complainno.'")</script>';
+$a = $_POST['taxdetails'];
+$p = $a*2;
+echo '<script>  alert("You have to pay tax  " + "'.$p.'" ) </script>';
+//  echo '<script> alert("Your Tax Amount is  "+"'.$complainno.'")</script>';
+$sql=mysqli_query($bd, "update tblcomplaints set complaintDetails='$a'");
+$sql=mysqli_query($bd, "update tblcomplaints set noc='$p'");
 }
 ?>
 
@@ -117,12 +122,12 @@ while ($rw=mysqli_fetch_array($sql)) {
 ?>
 </select>
  </div>
-<!-- <label class="col-sm-2 col-sm-2 control-label">Sub Category </label>
+<label class="col-sm-2 col-sm-2 control-label">Sub Category </label>
  <div class="col-sm-4">
 <select name="subcategory" id="subcategory" class="form-control" >
 <option value="">Select Subcategory</option>
 </select>
-</div> -->
+</div>
  </div>
 
 
@@ -132,8 +137,8 @@ while ($rw=mysqli_fetch_array($sql)) {
 <label class="col-sm-2 col-sm-2 control-label">Tax Type</label>
 <div class="col-sm-4">
 <select name="complaintype" class="form-control" required="">
-                <option value=" Complaint"> Property</option>
-                  <option value="General Query">General Query</option>
+                <option value=" Complaint" readonly> Property</option>
+                  <!-- <option value="General Query">General Query</option> -->
                 </select> 
 </div>
 
@@ -165,7 +170,8 @@ while ($rw=mysqli_fetch_array($sql)) {
 <div class="form-group">
 <label class="col-sm-2 col-sm-2 control-label">Property Details(In Sq.Ft.)  </label>
 <div class="col-sm-6">
-<textarea  name="complaindetails" required="required" cols="5" rows="1" class="form-control" maxlength="20"></textarea>
+<textarea  name="taxdetails"  required="required" cols="5" rows="1" class="form-control" maxlength="20"></textarea>
+
 </div>
 </div>
 <div class="form-group">

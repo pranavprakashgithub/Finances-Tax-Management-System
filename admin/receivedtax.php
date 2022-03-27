@@ -17,13 +17,13 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Admin| Manage Users</title>
+	<title>Admin| Received Tax</title>
 	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
-		<script language="javascript" type="text/javascript">
+	<script language="javascript" type="text/javascript">
 var popUpWin=0;
 function popUpWindow(URLStr, left, top, width, height)
 {
@@ -31,7 +31,7 @@ function popUpWindow(URLStr, left, top, width, height)
 {
 if(!popUpWin.closed) popUpWin.close();
 }
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+500+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
 }
 
 </script>
@@ -48,62 +48,45 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 	<div class="module">
 							<div class="module-head">
-								<h3>Manage Workers</h3>
+								<h3>Received Tax</h3>
 							</div>
 							<div class="module-body table">
-	<?php if(isset($_GET['del']))
-{?>
-									<div class="alert alert-error">
-										<button type="button" class="close" data-dismiss="alert">×</button>
-									<strong>Oh snap!</strong> 	<?php echo htmlentities($_SESSION['delmsg']);?><?php echo htmlentities($_SESSION['delmsg']="");?>
-									</div>
-<?php } ?>
 
-									<br />
 
-                                        
-								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
-                                
+							
+								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" >
 									<thead>
-                                    
 										<tr>
-											<th>#</th>
-											<th> Name</th>
-											<th>Email </th>
-											<th>Contact no</th>
-											<th>Reg. Date </th>
+											<th>Receipt No</th>
+											<th> Tax Payer Name</th>
+											<th>Reg Date</th>
+											<th>Status</th>
+											
 											<th>Action</th>
-                                            <th>DEPARTMENT</th>
+											
 										
 										</tr>
 									</thead>
-									<tbody>
-                                    <a href="javascript:void(0);" onClick="popUpWindow('http://localhost/Complaint Management System/admin/worker_form.php?')">
-  <button type="submit" class="btn btn-primary">ADD</button>
-</a>
-
-<?php $query=mysqli_query($bd, "select * from workers");
- 
-$cnt=1;
+								
+<tbody>
+<?php 
+$query=mysqli_query($bd, "select tblcomplaints.*,users.fullName as name from tblcomplaints join users on users.id=tblcomplaints.userId where tblcomplaints.status is null ");
 while($row=mysqli_fetch_array($query))
 {
-?>									
-                                      
+?>										
 										<tr>
-                                        
-											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['fullName']);?></td>
-											<td><?php echo htmlentities($row['userEmail']);?></td>
-											<td> <?php echo htmlentities($row['contactNo']);?></td>
-										
+											<td><?php echo htmlentities($row['complaintNumber']);?></td>
+											<td><?php echo htmlentities($row['name']);?></td>
 											<td><?php echo htmlentities($row['regDate']);?></td>
-
-											<td><a href="javascript:void(0);" onClick="popUpWindow('http://localhost/Complaint Management System/admin/workerprofile.php?uid=<?php echo htmlentities($row['wid']);?>');" title="Update order">
-											 <button type="button" class="btn btn-primary">View Detials</button>
-											</a></td>
-											<td><?php echo htmlentities($row['categoryName']); ?></td>
-										<?php $cnt=$cnt+1; } ?>
 										
+											<td><button type="button" class="btn btn-danger" style="background-color: green;">Received</button></td>
+											
+											<td>   <a href="tax-details.php?cid=<?php echo htmlentities($row['complaintNumber']);?>"> View Details</a> 
+											</td>
+											</tr>
+
+										<?php  } ?>
+										</tbody>
 								</table>
 							</div>
 						</div>						
