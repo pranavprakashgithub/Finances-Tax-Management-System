@@ -15,14 +15,14 @@ $category=$_POST['category'];
 $subcat=$_POST['subcategory'];
 $complaintype=$_POST['complaintype'];
 $state=$_POST['state'];
-$noc=$_POST['noc'];
-$complaintdetials=$_POST['taxdetails'];
+$p=$_POST['noc'];
+$a=$_POST['taxdetails'];
 $compfile=$_FILES["compfile"]["name"];
 
 
 
 move_uploaded_file($_FILES["compfile"]["tmp_name"],"taxrelateddocs/".$_FILES["compfile"]["name"]);
-$query=mysqli_query($bd, "insert into tblcomplaints(userId,category,subcategory,complaintType,state,noc,complaintDetails,complaintFile) values('$uid','$category','$subcat','$complaintype','$state','$noc','$complaintdetails','$compfile')");
+$query=mysqli_query($bd, "insert into tblcomplaints(userId,category,subcategory,complaintType,state,noc,complaintDetails,complaintFile) values('$uid','$category','$subcat','$complaintype','$state','$b','$a','$compfile')");
 
 $sql=mysqli_query($bd, "select complaintNumber from tblcomplaints  order by complaintNumber desc limit 1");
 while($row=mysqli_fetch_array($sql))
@@ -34,8 +34,8 @@ $a = $_POST['taxdetails'];
 $p = $a*2;
 echo '<script>  alert("You have to pay tax  " + "'.$p.'" ) </script>';
 //  echo '<script> alert("Your Tax Amount is  "+"'.$complainno.'")</script>';
-$sql=mysqli_query($bd, "update tblcomplaints set complaintDetails='$a'");
-$sql=mysqli_query($bd, "update tblcomplaints set noc='$p'");
+//$sql=mysqli_query($bd, "update tblcomplaints set complaintDetails='$a' where userId='$uid'");
+//$sql=mysqli_query($bd, "update tblcomplaints set noc='$p' where subcategory='$subcat'['subcategory']");
 }
 ?>
 

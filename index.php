@@ -41,16 +41,16 @@ error_reporting(0);
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="http://localhost/Finances-Tax-Management-System/users/">User Login</a>
+                        <a href="https://localhost/Finances-Tax-Management-System/users/">User Login</a>
                     </li>
                     <li>
-                        <a href="http://localhost/Finances-Tax-Management-System/users/registration.php">User Registration</a>
+                        <a href="https://localhost/Finances-Tax-Management-System/users/registration.php">User Registration</a>
                     </li>
                     <!-- <li>
                         <a href="http://localhost/Complaint Management System/worker/">Worker</a>
                     </li> -->
                     <li> 
-                        <a href="http://localhost/Finances-Tax-Management-System/admin/">Admin</a>
+                        <a href="https://localhost/Finances-Tax-Management-System/admin/">Admin</a>
                     </li>
                 </ul>
             </div>
