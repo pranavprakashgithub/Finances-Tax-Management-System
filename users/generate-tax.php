@@ -109,7 +109,7 @@ function getCat(val) {
                       <form class="form-horizontal style-form" method="post" name="complaint" enctype="multipart/form-data" >
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Category</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Category</b></label>
 <div class="col-sm-4">
 <select name="category" id="category" class="form-control" onChange="getCat(this.value);" required="">
 <option value="">Select Category</option>
@@ -122,7 +122,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 ?>
 </select>
  </div>
-<label class="col-sm-2 col-sm-2 control-label">Sub Category </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Sub Category</b> </label>
  <div class="col-sm-4">
 <select name="subcategory" id="subcategory" class="form-control" >
 <option value="">Select Subcategory</option>
@@ -134,7 +134,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Tax Type</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Tax Type</b></label>
 <div class="col-sm-4">
 <select name="complaintype" class="form-control" required="">
                 <option value=" Complaint" readonly> Property</option>
@@ -142,7 +142,7 @@ while ($rw=mysqli_fetch_array($sql)) {
                 </select> 
 </div>
 
-<label class="col-sm-2 col-sm-2 control-label">Area Type</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Area Type</b></label>
 <div class="col-sm-4">
 <select name="state" required="required" class="form-control">
 <option value="">Select Area</option>
@@ -168,14 +168,14 @@ while ($rw=mysqli_fetch_array($sql)) {
 </div> -->
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Property Details(In Sq.Ft.)  </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Property Details(In Sq.Ft.)</b>  </label>
 <div class="col-sm-6">
 <textarea  name="taxdetails"  required="required" cols="5" rows="1" class="form-control" maxlength="20"></textarea>
 
 </div>
 </div>
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Tax Related Doc(if any) </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Tax Related Doc(if any)</b> </label>
 <div class="col-sm-6">
 <input type="file" name="compfile" class="form-control" value="">
 </div>

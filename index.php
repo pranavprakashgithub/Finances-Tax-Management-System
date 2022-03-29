@@ -25,9 +25,16 @@ error_reporting(0);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"  style="background-color: #017E7E;">
+    <div class="trans" style="height: 40px; width:100vw; background-color:#045D5D; color: white; ">
+                <img src="logo.jpeg" alt="Tax Portal" style="width: 50px; height: 40px; margin-left: 20px;">
+                <b>Ministry Of Housing & Urban Affairs</b>
+                <span style=" color:blue; border-radius: 5px; margin-left: 67%;"><select><option>English</option><option>हिंदी</option></select></span>
+            </div>
+    <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
+           
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -35,22 +42,22 @@ error_reporting(0);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">FINANCES & TAX PORTAL </a>
+                <a class="navbar-brand" href="#" style="color: white;"><b>FINANCES & TAX PORTAL </b></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav"style="margin-left: 46%;">
                     <li>
-                        <a href="https://localhost/Finances-Tax-Management-System/users/">User Login</a>
+                        <a href="https://localhost/Finances-Tax-Management-System/users/" style="color: white;">User Login</a>
                     </li>
-                    <li>
-                        <a href="https://localhost/Finances-Tax-Management-System/users/registration.php">User Registration</a>
+                    <li >
+                        <a href="https://localhost/Finances-Tax-Management-System/users/registration.php" style="color: white;">User Registration</a>
                     </li>
                     <!-- <li>
                         <a href="http://localhost/Complaint Management System/worker/">Worker</a>
                     </li> -->
-                    <li> 
-                        <a href="https://localhost/Finances-Tax-Management-System/admin/">Admin</a>
+                    <li > 
+                        <a href="https://localhost/Finances-Tax-Management-System/admin/"  style="color: white;">Admin</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +69,7 @@ error_reporting(0);
         .navbar {
             background-color: #2A3132;
         }
-    </style>
+            </style>
 
     <!-- Half Page Image Background Carousel Header -->
     <header id="myCarousel" class="carousel slide">
@@ -129,53 +136,56 @@ error_reporting(0);
                 </p>
             </div>
 
-            <section class="recentNews">
+            <section class="recentNews" style="background-color: #EDFFFF;">
                 <div class="container">
-                    <h2 class="news-title">Recent News</h2>
+                    <h2 class="news-title" style="color: #007c7c;;">3 Easy Steps</h2>
                     <div class="row">
                         <div class="ct-blog col-sm-6 col-md-4">
                             <div class="inner">
                                 <div class="fauxcrop">
-                                    <a href="#"><img alt="News Entry" src="https://dohadebates.com/wp-content/uploads/2020/06/DOHA-Water-Shortage-debate-300x169.jpg"></a>
+                                    <a href="#"><img alt="News Entry" src="https://www.cowin.gov.in/assets/images/Step_1.svg" style="height: 200px; width:270px;"></a>
                                 </div>
-                                <div class="ct-blog-content">
-                                    <div class="ct-blog-date">
+                                <div class="ct-blog-content" style="background-color: #007C7C; margin-top: 15px; height:120px;">
+                                    <!-- <div class="ct-blog-date">
                                         <span>March</span><strong>1</strong>
-                                    </div>
-                                    <h3 class="ct-blog-header">
-                                        Scarcity of Water due to shortage of rain!!! ALERT!!!
+                                    </div> -->
+                                    <h3 class="ct-blog-header" style="color: aliceblue;">
+                                        Get Yourself Register & Update Kyc Details
                                     </h3>
                                 </div>
+                                <a href="https://localhost/Finances-Tax-Management-System/users/registration.php"><h4 style="color: darkblue;"> Click Here To Register</h4></a>
                             </div>
                         </div>
                         <div class="ct-blog col-sm-6 col-md-4">
                             <div class="inner">
                                 <div class="fauxcrop">
-                                    <a href="#"><img alt="News Entry" src="https://www.paho.org/sites/default/files/styles/max_1500x1500/public/banner-covid-19-1280x549.jpg?itok=R7z_5No5"></a>
+                                    <a href="#"><img alt="News Entry" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO1l8u6jTVPvmYl5zkyXa5x5BWvGWAEmVDEw&usqp=CAU"style="height: 205px;"></a>
                                 </div>
-                                <div class="ct-blog-content">
-                                    <div class="ct-blog-date">
+                                <div class="ct-blog-content" style="background-color: #007C7C;margin-top: 15px; height:120px;">
+                                    <!-- <div class="ct-blog-date">
                                         <span>February</span><strong>27</strong>
-                                    </div>
-                                    <h3 class="ct-blog-header">
-                                        Covid cases rises in District...Stay Alert!!
+                                    </div> -->
+                                    <h3 class="ct-blog-header"style="color: aliceblue;">
+                                     Generate  Pay your Property Tax Contribute to GDP
                                     </h3>
                                 </div>
+                                <a href="https://localhost/Finances-Tax-Management-System/users/"><h4 style="color: darkblue;"> Login</h4></a>
                             </div>
                         </div>
                         <div class="ct-blog col-sm-6 col-md-4">
                             <div class="inner">
                                 <div class="fauxcrop">
-                                    <a href="#"><img alt="News Entry" src="https://english.cdn.zeenews.com/sites/default/files/2020/11/21/900427-night-curfew-mp.jpg"></a>
+                                    <a href="#"><img alt="News Entry" src="https://www.cowin.gov.in/assets/images/Step_3.svg" style="height: 180px;"></a>
                                 </div>
-                                <div class="ct-blog-content">
-                                    <div class="ct-blog-date">
+                                <div class="ct-blog-content"style="background-color: #007C7C;margin-top: 15px; height:120px;">
+                                    <!-- <div class="ct-blog-date">
                                         <span>February</span><strong>25</strong>
-                                    </div>
-                                    <h3 class="ct-blog-header">
-                                        CM ANNOUNCES!!! Night curfew from Sunday...
+                                    </div> -->
+                                    <h3 class="ct-blog-header"style="color: aliceblue;">
+                                      Get e-receipt or Request For Registration of New Property
                                     </h3>
                                 </div>
+                                <a href="https://localhost/Finances-Tax-Management-System/users/"><h4 style="color: darkblue;"> Login</h4></a>
                             </div>
                         </div>
 

@@ -91,11 +91,11 @@ $errormsg="Profile not updated !!";
                       <form class="form-horizontal style-form" method="post" name="profile" >
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Full Name</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Full Name</b></label>
 <div class="col-sm-4">
 <input type="text" name="fullname" required="required" value="<?php echo htmlentities($row['fullName']);?>" class="form-control" >
  </div>
-<label class="col-sm-2 col-sm-2 control-label">User Email </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>User Email</b> </label>
  <div class="col-sm-4">
 <input type="email" name="useremail" required="required" value="<?php echo htmlentities($row['userEmail']);?>" class="form-control" readonly>
 </div>
@@ -103,18 +103,18 @@ $errormsg="Profile not updated !!";
 
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Contact</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Contact</b></label>
  <div class="col-sm-4">
 <input type="text" name="contactno" required="required" value="<?php echo htmlentities($row['contactNo']);?>" class="form-control">
 </div>
-<label class="col-sm-2 col-sm-2 control-label">Address </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Address</b> </label>
 <div class="col-sm-4">
 <textarea  name="address" required="required" class="form-control"><?php echo htmlentities($row['address']);?></textarea>
 </div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Area</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Area</b></label>
 <div class="col-sm-4">
 <select name="state" required="required" class="form-control">
 <option value="<?php echo htmlentities($row['State']);?>"><?php echo htmlentities($st=$row['State']);?></option>
@@ -134,7 +134,7 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 </select>
 </div>
-<label class="col-sm-2 col-sm-2 control-label">Country </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Country </b></label>
 <div class="col-sm-4">
 <input type="text" name="country" required="required" value="India" class="form-control" readonly>
 </div>
@@ -142,17 +142,17 @@ while ($rw=mysqli_fetch_array($sql)) {
 
 
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Pincode</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Pincode</b></label>
 <div class="col-sm-4">
 <input type="text" name="pincode" maxlength="6" required="required" value="<?php echo htmlentities($row['pincode']);?>" class="form-control">
 </div>
-<label class="col-sm-2 col-sm-2 control-label">House No.</label>
+<label class="col-sm-2 col-sm-2 control-label"><b>House No.</b></label>
 <div class="col-sm-4">
 <input type="text" name="houseno" maxlength="10" required="required" value="<?php echo htmlentities($row['houseno']);?>" class="form-control">
 </div>
 </div>
 <div class="form-group">
-<label class="col-sm-2 col-sm-2 control-label">Reg Date </label>
+<label class="col-sm-2 col-sm-2 control-label"><b>Reg Date</b> </label>
 <div class="col-sm-4">
 <input type="text" name="regdate" required="required" value="<?php echo htmlentities($row['regDate']);?>" class="form-control" readonly>
  </div>
